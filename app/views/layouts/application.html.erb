@@ -1,14 +1,35 @@
 <!DOCTYPE html>
+
 <html>
   <head>
-    <title>Fkpc</title>
+    <title>FKPC EM</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+          <%= link_to "Home", root_path, class: "navbar-brand" %>
+          <%= link_to "About Us", about_path, class: "navbar-brand" %>
+          <%= link_to "Ministries", ministries_path, class: "navbar-brand" %>
+          <%= link_to "Announcements", announcements_path, class: "navbar-brand" %>
+          
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
+
 </html>

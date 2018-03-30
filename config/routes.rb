@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  resources :announcements
+  root 'fkpc#index'
+
   get 'fkpc/index'
 
-  get 'fkpc/about'
+  get 'about' => 'fkpc#about'
 
-  get 'fkpc/ministries'
+  get 'ministries' => 'fkpc#ministries'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
