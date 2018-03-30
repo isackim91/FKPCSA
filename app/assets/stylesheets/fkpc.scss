@@ -1,3 +1,32 @@
 // Place all the styles related to the FKPC controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+      position: relative;
+  }
+  ul.nav-pills {
+      top: 200px;
+      position: fixed;
+  }
+  div.col-sm-10 div {
+      height: 500px;
+      font-size: 28px;
+  }
+  #section1 {color: #fff; background-color: #1E88E5;}
+  #section2 {color: #fff; background-color: #673ab7;}
+  #section3 {color: #fff; background-color: #ff9800;}
+  #section4 {color: #fff; background-color: #00bcd4;}
+
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section4 {
+        margin-left: 150px;
+    }
+  }
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 80%;
+      margin: auto;
+  }
