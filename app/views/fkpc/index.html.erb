@@ -1,84 +1,41 @@
-<div class="container">	  
-  <!--carousel-->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <%= image_tag('feb25.jpg', :alt => "group photo") %>
-      </div>
-      <div class="item">
-        <%= image_tag('badminton.jpg', :alt => "a doubles game of badminton") %>
-      </div>
-      <div class="item">
-        <%= image_tag('youth_worship.jpg', :alt => "children worshipping") %>
-      </div>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
     </div>
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  <!--end of carousel-->
-  <br>
-  <div class="row">
-  	<div class="col-sm-12">
-	  <div class="card">
-	    <div class="card-header">
-	      <h2 class="card-title">About Us</h2>
-	    </div>
-	    <div class="card-body">
-	      <blockquote class="blockquote mb-0">
-	        <p> 예수 그리스도의 교회인 샌안토니오 제일 한인 장로교회는 하나님의 말씀에 기초하여, 하나님의 영광을 드러내는 그리스도의 제자를 세워가며, 이 지역과 더 나아가 온 세상에 복음을 전하기 위해 존재한다.</p>
-	        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-	      </blockquote>
-        </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">Section 1</a></li>
+          <li><a href="#section2">Section 2</a></li>
+          <li><a href="#section3">Section 3</a></li>
+
+
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#section41">Section 4-1</a></li>
+              <li><a href="#section42">Section 4-2</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-  <br>
-  <div class="row">	
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">Service Times</h2>
-          <p class="card-text">
-            <table style="width:100%">
-  			  <tr>
-                <th>Service</th>
-                <th>Start Time</th>
-              </tr>
-              <tr>
-                <td>Korean Service</td>
-                <td>11 AM</td>
-              </tr>
-              <tr>
-                <td>English Service</td>
-                <td>11 AM</td>
-              </tr>
-              <tr>
-                <td>Youth Service</td>
-                <td>11 AM</td>
-              </tr>
-              <tr>
-                <td>Childrens Service</td>
-                <td>11 AM</td>
-              </tr>
-            </table> 
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
+</nav>    
+
+<div id="section1" class="container-fluid">
+
+  <p>Future Carousel</p>
+</div>
+
+<div id="section2" class="container-fluid">
+  <h1>Section 2</h1>
       <div class="card">
         <div class="card-block">
           <h2 class="card-title">Announcements</h2>
@@ -108,24 +65,75 @@
         </div>
       </div>
     </div>
-  </div>
   <!-- end of modal -->     
   <% end %>
-  <br>
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="card">
+</div>
+
+<div id="section3" class="container-fluid">
+  <h1>Section 3</h1>
+  <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Location</h2>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <h2 class="card-title">Service Times</h2>
+          <p class="card-text">
+            <table style="width:100%">
+          <tr>
+                <th>Service</th>
+                <th>Start Time</th>
+              </tr>
+              <tr>
+                <td>Korean Service</td>
+                <td>11 AM</td>
+              </tr>
+              <tr>
+                <td>English Service</td>
+                <td>11 AM</td>
+              </tr>
+              <tr>
+                <td>Youth Service</td>
+                <td>11 AM</td>
+              </tr>
+              <tr>
+                <td>Childrens Service</td>
+                <td>11 AM</td>
+              </tr>
+            </table> 
         </div>
       </div>
-    </div>
-  </div> 
+</div>
+<div id="section41" class="container-fluid">
+  <h1>Section 4 Submenu 1</h1>
+  <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">About Us</h2>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p> 예수 그리스도의 교회인 샌안토니오 제일 한인 장로교회는 하나님의 말씀에 기초하여, 하나님의 영광을 드러내는 그리스도의 제자를 세워가며, 이 지역과 더 나아가 온 세상에 복음을 전하기 위해 존재한다.</p>
+          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+        </div>
+      </div>
+</div>
+<div id="section42" class="container-fluid">
+  <h1>Section 4 Submenu 2</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div> 
+
+<div id="section5" class="container-fluid">
+  <h1>Section 5</h1>
+          <div id="map-canvas"></div>
+</div>
 
 
 
 
 
 
-</div> <!--closed container div-->
+    
+
+
+</body>
+
+
+
