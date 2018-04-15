@@ -1,5 +1,5 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top second">
   <div class="container-fluid">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -15,14 +15,9 @@
           <li><a href="#section1">Section 1</a></li>
           <li><a href="#section2">Section 2</a></li>
           <li><a href="#section3">Section 3</a></li>
-
-
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#section41">Section 4-1</a></li>
-              <li><a href="#section42">Section 4-2</a></li>
-            </ul>
-          </li>
+          <li><a href="#section3">Section 4</a></li>
+          <li><a href="#section3">Section 5</a></li>
+          <li><a href="#section3">Section 6</a></li>
         </ul>
       </div>
     </div>
@@ -35,10 +30,9 @@
 </div>
 
 <div id="section2" class="container-fluid">
-  <h1>Section 2</h1>
-      <div class="card">
+      <div class="card" id="announcement">
         <div class="card-block">
-          <h2 class="card-title">Announcements</h2>
+          <h1 class="card-title">Announcements</h1>
           <p class="card-text">
             <% @announcements.each do |announcement| %>
               <a href="#" data-toggle="modal" data-target="#myModal_<%= announcement.id %>">
@@ -62,20 +56,22 @@
               </div>    
             </div>  
           </div>
+          <%= button_to "Past Announcements", announcements_path, :method => "get", class: "btn btn-primary" %>
         </div>
       </div>
     </div>
+
   <!-- end of modal -->     
   <% end %>
+
 </div>
 
 <div id="section3" class="container-fluid">
-  <h1>Section 3</h1>
   <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Service Times</h2>
+          <h1 class="card-title">Service Times</h1>
           <p class="card-text">
-            <table style="width:100%">
+            <table style="width:25%">
           <tr>
                 <th>Service</th>
                 <th>Start Time</th>
@@ -98,29 +94,30 @@
               </tr>
             </table> 
         </div>
+        <%= button_to "More Info", ministries_path, :method => "get", class: "btn btn-primary" %>
       </div>
 </div>
-<div id="section41" class="container-fluid">
-  <h1>Section 4 Submenu 1</h1>
+<div id="section4" class="container-fluid">
   <div class="card">
       <div class="card-header">
-        <h2 class="card-title">About Us</h2>
+        <h1 class="card-title">About Us</h1>
       </div>
       <div class="card-body">
         <blockquote class="blockquote mb-0">
           <p> 예수 그리스도의 교회인 샌안토니오 제일 한인 장로교회는 하나님의 말씀에 기초하여, 하나님의 영광을 드러내는 그리스도의 제자를 세워가며, 이 지역과 더 나아가 온 세상에 복음을 전하기 위해 존재한다.</p>
           <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
         </blockquote>
+        <%= button_to "Learn More", about_path, :method => "get", class: "btn btn-primary" %>
         </div>
       </div>
 </div>
-<div id="section42" class="container-fluid">
+<div id="section5" class="container-fluid">
   <h1>Section 4 Submenu 2</h1>
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
 </div> 
 
-<div id="section5" class="container-fluid">
+<div id="section6" class="container-fluid">
   <h1>Section 5</h1>
           <div id="map-canvas"></div>
 </div>
