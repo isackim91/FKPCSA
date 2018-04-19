@@ -1,0 +1,29 @@
+
+<%= form_with(model: sermon, local: true) do |form| %>
+  <% if sermon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sermon.errors.count, "error") %> prohibited this sermon from being saved:</h2>
+
+      <ul>
+      <% sermon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+    <div class="form-group">
+      <%= form.text_field :title, placeholder: "Sermon Title", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <strong>Upload Sermon:</strong>
+      <%= form.file_field :sermon %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Submit", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

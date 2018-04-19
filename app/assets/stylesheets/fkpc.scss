@@ -9,14 +9,19 @@ body {
       top: 200px;
       position: fixed;
   }
-  div.col-sm-10 div {
+  .col-sm-10 {
+      width: 200px;
       height: 500px;
       font-size: 28px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      padding-top: 200px;
+      position: relative;
   }
-  #km {color: #fff; background-color: #1E88E5;}
-  #em{color: #fff; background-color: #673ab7;}
-  #ym {color: #fff; background-color: #ff9800;}
-  #cm {color: #fff; background-color: #00bcd4;}
+  #km {color: #fff; background-color: #1E88E5; height: 500px;}
+  #em{color: #fff; background-color: #673ab7; height: 500px;}
+  #ym {color: #fff; background-color: #ff9800; height: 500px;}
+  #cm {color: #fff; background-color: #00bcd4; height: 500px;}
 
   
   @media screen and (max-width: 810px) {
@@ -28,8 +33,4 @@ body {
   #map-canvas {
   width: 100%;
   height: 500px;
-}
-
-.second {
-  margin-top: 56px;
 }
